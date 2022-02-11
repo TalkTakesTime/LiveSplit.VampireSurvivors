@@ -3,7 +3,7 @@ using LiveSplit.Model;
 
 namespace LiveSplit.UI.Components {
     public class VampireSurvivorsFactory : IComponentFactory {
-        public string ComponentName => "VA Achievements";
+        public string ComponentName => "Vampire Survivors Tracker";
         public string Description => "Displays achievements obtained so far in the current Vampire Survivors run.";
         
         public Version Version => Version.Parse("1.0.0");
