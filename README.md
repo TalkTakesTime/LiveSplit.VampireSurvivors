@@ -39,6 +39,8 @@ You may need to readjust your LiveSplit window's size to ensure that the achieve
 
 ![Vampire Survivors Tracker UI in LiveSplit](livesplit-vampiresurvivors_0.2.11.png)
 
+__Note:__ It will start tracking stats when you start a split, and it will stop tracking when you stop a split. When LiveSplit's timer is not running (unless paused), it will display the default all-zero stats.
+
 ### Building
 1. Clone the [LiveSplit repository](https://github.com/LiveSplit/LiveSplit)
 2. Set up a working build environment for LiveSplit according to their instructions and ensure that you can build it
