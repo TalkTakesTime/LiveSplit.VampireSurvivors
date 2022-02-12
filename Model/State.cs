@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using LiveSplit.VampireSurvivors.Model.SaveData;
 using Newtonsoft.Json;
 
 namespace LiveSplit.VampireSurvivors.Model {
@@ -30,7 +32,9 @@ namespace LiveSplit.VampireSurvivors.Model {
             }
         }
 
-        public State() {}
+        public State() {
+            Achievements = new HashSet<Achievement>();
+        }
         
         public State(SaveData.SaveData data) {
             TotalKills = data.KillCount.Values.Sum();
@@ -40,14 +44,17 @@ namespace LiveSplit.VampireSurvivors.Model {
             }
 
             TotalHealing = (int) data.LifetimeHeal;
+            Achievements = new HashSet<Achievement>(data.Achievements ?? new List<Achievement>());
         }
         
-        public int TotalKills { get; set; }
-        public int TotalSkeles { get; set; }
-        public int TotalHealing { get; set; }
+        public int TotalKills { get; }
+        public int TotalSkeles { get; }
+        public int TotalHealing { get; }
 
         public int RemainingKills => Math.Max(0, TargetKills - TotalKills);
         public int RemainingSkeles => Math.Max(0, TargetSkeles - TotalSkeles);
         public int RemainingHealing => Math.Max(0, TargetHealing - TotalHealing);
+
+        public HashSet<Achievement> Achievements { get; }
     }
 }

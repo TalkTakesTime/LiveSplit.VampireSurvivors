@@ -44,15 +44,11 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="Images\ImageResource.cs" />
+        <Compile Include="Model\SaveData\Achievement.cs" />
         <Compile Include="Model\SaveData\SaveData.cs" />
         <Compile Include="Model\State.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
-        <Compile Include="UI\Components\VampireSurvivorsControl.cs">
-          <SubType>UserControl</SubType>
-        </Compile>
-        <Compile Include="UI\Components\VampireSurvivorsControl.Designer.cs">
-          <DependentUpon>VampireSurvivorsControl.cs</DependentUpon>
-        </Compile>
         <Compile Include="UI\Components\VampireSurvivorsFactory.cs" />
         <Compile Include="UI\Components\VampireSurvivorsComponent.cs" />
         <Compile Include="UI\Components\VampireSurvivorsSettings.cs">
@@ -60,6 +56,18 @@
         </Compile>
         <Compile Include="UI\Components\VampireSurvivorsSettings.Designer.cs">
           <DependentUpon>VampireSurvivorsSettings.cs</DependentUpon>
+        </Compile>
+        <Compile Include="UI\Controls\AchievementControl.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="UI\Controls\AchievementControl.Designer.cs">
+          <DependentUpon>AchievementControl.cs</DependentUpon>
+        </Compile>
+        <Compile Include="UI\Controls\VampireSurvivorsControl.cs">
+          <SubType>UserControl</SubType>
+        </Compile>
+        <Compile Include="UI\Controls\VampireSurvivorsControl.Designer.cs">
+          <DependentUpon>VampireSurvivorsControl.cs</DependentUpon>
         </Compile>
     </ItemGroup>
     <ItemGroup>
@@ -73,15 +81,65 @@
       </ProjectReference>
     </ItemGroup>
     <ItemGroup>
-      <EmbeddedResource Include="UI\Components\VampireSurvivorsControl.resx">
-        <DependentUpon>VampireSurvivorsControl.cs</DependentUpon>
-      </EmbeddedResource>
       <EmbeddedResource Include="UI\Components\VampireSurvivorsSettings.resx">
         <DependentUpon>VampireSurvivorsSettings.cs</DependentUpon>
+      </EmbeddedResource>
+      <EmbeddedResource Include="UI\Controls\AchievementControl.resx">
+        <DependentUpon>AchievementControl.cs</DependentUpon>
+      </EmbeddedResource>
+      <EmbeddedResource Include="UI\Controls\VampireSurvivorsControl.resx">
+        <DependentUpon>VampireSurvivorsControl.cs</DependentUpon>
       </EmbeddedResource>
     </ItemGroup>
     <ItemGroup>
       <None Include="packages.config" />
+    </ItemGroup>
+    <ItemGroup>
+      <EmbeddedResource Include="Images\checkbox.png" />
+      <EmbeddedResource Include="Images\checkbox_checked.png" />
+      <EmbeddedResource Include="Images\Defeat100KEnemies.png" />
+      <EmbeddedResource Include="Images\Defeat3000Skeletons.png" />
+      <EmbeddedResource Include="Images\Defeat5000Enemies.png" />
+      <EmbeddedResource Include="Images\DefeatBossLibrary.png" />
+      <EmbeddedResource Include="Images\DefeatBossMadForest.png" />
+      <EmbeddedResource Include="Images\Destroy20Candles.png" />
+      <EmbeddedResource Include="Images\Earn5000CoinsInASingleRun.png" />
+      <EmbeddedResource Include="Images\Eat5PotRoast.png" />
+      <EmbeddedResource Include="Images\EvolveAxe.png" />
+      <EmbeddedResource Include="Images\EvolveCross.png" />
+      <EmbeddedResource Include="Images\EvolveFireWand.png" />
+      <EmbeddedResource Include="Images\EvolveGarlic.png" />
+      <EmbeddedResource Include="Images\EvolveKingBible.png" />
+      <EmbeddedResource Include="Images\EvolveKnife.png" />
+      <EmbeddedResource Include="Images\EvolveMagicWand.png" />
+      <EmbeddedResource Include="Images\EvolveSantaWater.png" />
+      <EmbeddedResource Include="Images\EvolveWhip.png" />
+      <EmbeddedResource Include="Images\FindAClover.png" />
+      <EmbeddedResource Include="Images\FindAnOrologion.png" />
+      <EmbeddedResource Include="Images\FindARosary.png" />
+      <EmbeddedResource Include="Images\FindAStoneMask.png" />
+      <EmbeddedResource Include="Images\FindAVacuum.png" />
+      <EmbeddedResource Include="Images\GetFireWandToLevel4.png" />
+      <EmbeddedResource Include="Images\GetGarlicToLevel7.png" />
+      <EmbeddedResource Include="Images\GetHolyBookToLevel4.png" />
+      <EmbeddedResource Include="Images\GetHolyWaterToLevel4.png" />
+      <EmbeddedResource Include="Images\GetLightningRingToLevel4.png" />
+      <EmbeddedResource Include="Images\GetMagicMissileToLevel7.png" />
+      <EmbeddedResource Include="Images\GetPeachoneToLevel7.png" />
+      <EmbeddedResource Include="Images\GetRunetracerToLevel7.png" />
+      <EmbeddedResource Include="Images\Have6DifferentWeapons.png" />
+      <EmbeddedResource Include="Images\ReachLV10.png" />
+      <EmbeddedResource Include="Images\ReachLV20InMadForest.png" />
+      <EmbeddedResource Include="Images\ReachLV5.png" />
+      <EmbeddedResource Include="Images\Recover1000HP.png" />
+      <EmbeddedResource Include="Images\Survive10Minutes.png" />
+      <EmbeddedResource Include="Images\Survive1Minute.png" />
+      <EmbeddedResource Include="Images\Survive20Minutes.png" />
+      <EmbeddedResource Include="Images\Survive20MinutesWithCross.png" />
+      <EmbeddedResource Include="Images\Survive5MinutesWithDiamond.png" />
+      <EmbeddedResource Include="Images\Survive5MinutesWithKnife.png" />
+      <EmbeddedResource Include="Images\UniteBirds.png" />
+      <EmbeddedResource Include="Images\Unlock2Hypers.png" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using System.Xml;
 using LiveSplit.VampireSurvivors.Model;
 using LiveSplit.VampireSurvivors.Model.SaveData;
+using LiveSplit.VampireSurvivors.UI.Controls;
 
 namespace LiveSplit.UI.Components {
     public class VampireSurvivorsComponent : ControlComponent {

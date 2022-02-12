@@ -12,5 +12,6 @@ namespace LiveSplit.VampireSurvivors.Model.SaveData {
         
         public float LifetimeHeal { get; set; }
         public Dictionary<string, int> KillCount { get; set; }
+        public List<Achievement> Achievements { get; set; }
     }
 }
