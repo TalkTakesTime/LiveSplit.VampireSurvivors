@@ -6,7 +6,7 @@ namespace LiveSplit.UI.Components {
         public string ComponentName => "Vampire Survivors Tracker";
         public string Description => "Displays achievements obtained so far in the current Vampire Survivors run.";
         
-        public Version Version => Version.Parse("1.0.0");
+        public Version Version => Version.Parse("0.1.0");
         public ComponentCategory Category => ComponentCategory.Information;
         
         public string UpdateName => ComponentName;

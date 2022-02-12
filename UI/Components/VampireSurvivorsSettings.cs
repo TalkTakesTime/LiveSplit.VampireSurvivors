@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Reflection;
 using System.Windows.Forms;
 using System.Xml;
 
@@ -73,7 +74,7 @@ namespace LiveSplit.UI.Components {
         }
 
         private int CreateSettingsNode(XmlDocument doc, XmlElement parent) {
-            return SettingsHelper.CreateSetting(doc, parent, "Version", "1.0") ^
+            return SettingsHelper.CreateSetting(doc, parent, "Version", Assembly.GetExecutingAssembly().GetName().Version.ToString()) ^
                    SettingsHelper.CreateSetting(doc, parent, InstallDirSetting, VsInstallDir);
         }
 
