@@ -50,9 +50,12 @@ namespace LiveSplit.UI.Components {
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error
                 );
+                txtVsDir.Text = "";
+                VsInstallDir = null;
                 return;
             }
 
+            txtVsDir.Text = vsDir;
             VsInstallDir = vsDir;
         }
 

@@ -28,12 +28,16 @@ namespace LiveSplit.UI.Components {
             Settings = new VampireSurvivorsSettings();
             _control = (VampireSurvivorsControl)Control;
             ResetState();
-            
+
             CurrentState.OnStart += state_OnStart;
             CurrentState.OnReset += state_OnReset;
         }
 
         private void state_OnStart(object sender, EventArgs e) {
+            if (string.IsNullOrEmpty(Settings.VsInstallDir)) {
+                return;
+            }
+
             _saveWatcher = new FileSystemWatcher(Path.Combine(Settings.VsInstallDir, SaveData.SaveDataDir));
             _saveWatcher.Filter = SaveData.SaveDataFile;
             _saveWatcher.NotifyFilter = NotifyFilters.LastWrite | NotifyFilters.Size | NotifyFilters.CreationTime;
@@ -52,7 +56,7 @@ namespace LiveSplit.UI.Components {
         private void state_OnReset(object sender, TimerPhase _) => StopWatching();
 
         private void StopWatching() {
-            _saveWatcher.Dispose();
+            _saveWatcher?.Dispose();
             _saveWatcher = null;
             ResetState();
         }
