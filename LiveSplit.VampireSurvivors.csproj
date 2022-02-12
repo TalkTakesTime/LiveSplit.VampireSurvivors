@@ -44,6 +44,8 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="Attributes\AttributeExtensions.cs" />
+        <Compile Include="Attributes\DescriptionAttribute.cs" />
         <Compile Include="Images\ImageResource.cs" />
         <Compile Include="Model\SaveData\Achievement.cs" />
         <Compile Include="Model\SaveData\SaveData.cs" />

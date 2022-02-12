@@ -3,8 +3,10 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
+using LiveSplit.VampireSurvivors.Attributes;
 using LiveSplit.VampireSurvivors.Images;
 using LiveSplit.VampireSurvivors.Model.SaveData;
+using DescriptionAttribute = LiveSplit.VampireSurvivors.Attributes.DescriptionAttribute;
 
 namespace LiveSplit.VampireSurvivors.UI.Controls {
     public partial class AchievementControl : UserControl, INotifyPropertyChanged {
@@ -32,6 +34,11 @@ namespace LiveSplit.VampireSurvivors.UI.Controls {
 
         public AchievementControl(Achievement ach) : this() {
             _resource = ach.GetResource();
+
+            if (ach.GetAttribute<DescriptionAttribute>() is DescriptionAttribute attr) {
+                var tt = new ToolTip();
+                tt.SetToolTip(imgAchievement, attr.Description);
+            }
         }
 
         private void AchievementControl_Load(object sender, EventArgs e) {

@@ -1,4 +1,5 @@
-﻿using LiveSplit.VampireSurvivors.Images;
+﻿using LiveSplit.VampireSurvivors.Attributes;
+using LiveSplit.VampireSurvivors.Images;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
@@ -9,177 +10,91 @@ namespace LiveSplit.VampireSurvivors.Model.SaveData {
     
     [JsonConverter(typeof(StringEnumConverter))]
     public enum Achievement {
-        /// <summary>
-        /// Reach Level 5.
-        /// </summary>
+        [Description("Reach Level 5.")]
         ReachLV5,
-        /// <summary>
-        /// Reach Level 10.
-        /// </summary>
+        [Description("Reach Level 10.")]
         ReachLV10,
-        /// <summary>
-        /// Reach Level 20 in Mad Forest.
-        /// </summary>
+        [Description("Reach Level 20 in Mad Forest.")]
         ReachLV20InMadForest,
-        /// <summary>
-        /// Survive 1 minute with any character.
-        /// </summary>
+        [Description("Survive 1 minute with any character.")]
         Survive1Minute,
-        /// <summary>
-        /// Survive 5 minutes with Pasqualina.
-        /// </summary>
+        [Description("Survive 5 minutes with Pasqualina.")]
         Survive5MinutesWithDiamond,
-        /// <summary>
-        /// Survive 5 minutes with Gennaro.
-        /// </summary>
+        [Description("Survive 5 minutes with Gennaro.")]
         Survive5MinutesWithKnife,
-        /// <summary>
-        /// Survive 10 minutes with any character.
-        /// </summary>
+        [Description("Survive 10 minutes with any character.")]
         Survive10Minutes,
-        /// <summary>
-        /// Survive 20 minutes with any character.
-        /// </summary>
+        [Description("Survive 20 minutes with any character.")]
         Survive20Minutes,
-        /// <summary>
-        /// Survive 20 minutes with Krochi.
-        /// </summary>
+        [Description("Survive 20 minutes with Krochi.")]
         Survive20MinutesWithCross,
-        /// <summary>
-        /// Get Fire Wand to Level 4.
-        /// </summary>
+        [Description("Get Fire Wand to Level 4.")]
         GetFireWandToLevel4,
-        /// <summary>
-        /// Get King Bible to Level 4.
-        /// </summary>
+        [Description("Get King Bible to Level 4.")]
         GetHolyBookToLevel4,
-        /// <summary>
-        /// Get Santa Water to Level 4.
-        /// </summary>
+        [Description("Get Santa Water to Level 4.")]
         GetHolyWaterToLevel4,
-        /// <summary>
-        /// Get Lightning Ring to Level 4.
-        /// </summary>
+        [Description("Get Lightning Ring to Level 4.")]
         GetLightningRingToLevel4,
-        /// <summary>
-        /// Get Magic Wand to Level 7.
-        /// </summary>
+        [Description("Get Magic Wand to Level 7.")]
         GetMagicMissileToLevel7,
-        /// <summary>
-        /// Get Peachone to Level 7.
-        /// </summary>
+        [Description("Get Peachone to Level 7.")]
         GetPeachoneToLevel7,
-        /// <summary>
-        /// Get Runetracer to Level 7.
-        /// </summary>
+        [Description("Get Runetracer to Level 7.")]
         GetRunetracerToLevel7,
-        /// <summary>
-        /// Get Garlic to Level 7.
-        /// </summary>
+        [Description("Get Garlic to Level 7.")]
         GetGarlicToLevel7,
-        /// <summary>
-        /// Hold 6 different weapons at once.
-        /// </summary>
+        [Description("Hold 6 different weapons at once.")]
         Have6DifferentWeapons,
-        /// <summary>
-        /// Recover a total of 1000 HP.
-        /// </summary>
+        [Description("Recover a total of 1000 HP.")]
         Recover1000HP,
-        /// <summary>
-        /// Earn 5000 coins in a single run.
-        /// </summary>
+        [Description("Earn 5000 coins in a single run.")]
         Earn5000CoinsInASingleRun,
-        /// <summary>
-        /// Destroy 20 light sources.
-        /// </summary>
+        [Description("Destroy 20 light sources.")]
         Destroy20Candles,
-        /// <summary>
-        /// Find 5 Floor Chickens.
-        /// </summary>
+        [Description("Find 5 Floor Chickens.")]
         Eat5PotRoast,
-        /// <summary>
-        /// Find a Little Clover.
-        /// </summary>
+        [Description("Find a Little Clover.")]
         FindAClover,
-        /// <summary>
-        /// Find a Vacuum.
-        /// </summary>
+        [Description("Find a Vacuum.")]
         FindAVacuum,
-        /// <summary>
-        /// Find an Orologion.
-        /// </summary>
+        [Description("Find an Orologion.")]
         FindAnOrologion,
-        /// <summary>
-        /// Find a Rosary.
-        /// </summary>
+        [Description("Find a Rosary.")]
         FindARosary,
-        /// <summary>
-        /// Find a Stone Mask.
-        /// </summary>
+        [Description("Find a Stone Mask.")]
         FindAStoneMask,
-        /// <summary>
-        /// Defeat a total of 3000 skeletons.
-        /// </summary>
+        [Description("Defeat a total of 3000 skeletons.")]
         Defeat3000Skeletons,
-        /// <summary>
-        /// Defeat a total of 5000 enemies.
-        /// </summary>
+        [Description("Defeat a total of 5000 enemies.")]
         Defeat5000Enemies,
-        /// <summary>
-        /// Defeat a total of 100000 enemies.
-        /// </summary>
+        [Description("Defeat a total of 100000 enemies.")]
         Defeat100KEnemies,
-        /// <summary>
-        /// Defeat the gian Blue Venus in the Mad Forest.
-        /// </summary>
+        [Description("Defeat the gian Blue Venus in the Mad Forest.")]
         DefeatBossMadForest,
-        /// <summary>
-        /// Defeat the Nesuferit in the Inlaid Library.
-        /// </summary>
+        [Description("Defeat the Nesuferit in the Inlaid Library.")]
         DefeatBossLibrary,
-        /// <summary>
-        /// Unlock Hyper mode for 2 stages.
-        /// </summary>
+        [Description("Unlock Hyper mode for 2 stages.")]
         Unlock2Hypers,
-        /// <summary>
-        /// Evolve the Whip.
-        /// </summary>
+        [Description("Evolve the Whip.")]
         EvolveWhip,
-        /// <summary>
-        /// Evolve the Magic Wand.
-        /// </summary>
+        [Description("Evolve the Magic Wand.")]
         EvolveMagicWand,
-        /// <summary>
-        /// Evolve the Knife.
-        /// </summary>
+        [Description("Evolve the Knife.")]
         EvolveKnife,
-        /// <summary>
-        /// Evolve the Axe.
-        /// </summary>
+        [Description("Evolve the Axe.")]
         EvolveAxe,
-        /// <summary>
-        /// Evolve the Santa Water.
-        /// </summary>
+        [Description("Evolve the Santa Water.")]
         EvolveSantaWater,
-        /// <summary>
-        /// Evolve the King Bible.
-        /// </summary>
+        [Description("Evolve the King Bible.")]
         EvolveKingBible,
-        /// <summary>
-        /// Evolve the Cross.
-        /// </summary>
+        [Description("Evolve the Cross.")]
         EvolveCross,
-        /// <summary>
-        /// Evolve the Fire Wand.
-        /// </summary>
+        [Description("Evolve the Fire Wand.")]
         EvolveFireWand,
-        /// <summary>
-        /// Evolve the Garlic.
-        /// </summary>
+        [Description("Evolve the Garlic.")]
         EvolveGarlic,
-        /// <summary>
-        /// Unite Ebony Wings and Peachone.
-        /// </summary>
+        [Description("Unite Ebony Wings and Peachone.")]
         UniteBirds,
     }
 }
