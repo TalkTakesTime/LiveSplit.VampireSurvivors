@@ -46,6 +46,7 @@
     <ItemGroup>
         <Compile Include="Attributes\AttributeExtensions.cs" />
         <Compile Include="Attributes\DescriptionAttribute.cs" />
+        <Compile Include="Attributes\FromVersionAttribute.cs" />
         <Compile Include="Images\ImageResource.cs" />
         <Compile Include="Model\SaveData\Achievement.cs" />
         <Compile Include="Model\SaveData\SaveData.cs" />
@@ -142,6 +143,9 @@
       <EmbeddedResource Include="Images\Survive5MinutesWithKnife.png" />
       <EmbeddedResource Include="Images\UniteBirds.png" />
       <EmbeddedResource Include="Images\Unlock2Hypers.png" />
+      <EmbeddedResource Include="Images\EvolveLightning.png" />
+      <EmbeddedResource Include="Images\ReachLV100WithMortaccio.png" />
+      <EmbeddedResource Include="Images\Survive30MinutesInGreenAcres.png" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

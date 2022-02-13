@@ -35,10 +35,10 @@ namespace LiveSplit.VampireSurvivors.Model {
         public State() {
             Achievements = new HashSet<Achievement>();
         }
-        
+
         public State(SaveData.SaveData data) {
             TotalKills = data.KillCount.Values.Sum();
-            
+
             if (data.KillCount.TryGetValue(Skeleton, out int skeles)) {
                 TotalSkeles = skeles;
             }
@@ -46,7 +46,7 @@ namespace LiveSplit.VampireSurvivors.Model {
             TotalHealing = (int) data.LifetimeHeal;
             Achievements = new HashSet<Achievement>(data.Achievements ?? new List<Achievement>());
         }
-        
+
         public int TotalKills { get; }
         public int TotalSkeles { get; }
         public int TotalHealing { get; }

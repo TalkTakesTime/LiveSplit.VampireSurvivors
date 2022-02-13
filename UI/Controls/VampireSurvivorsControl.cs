@@ -9,6 +9,8 @@ using LiveSplit.VampireSurvivors.Model.SaveData;
 
 namespace LiveSplit.VampireSurvivors.UI.Controls {
     public partial class VampireSurvivorsControl : UserControl, INotifyPropertyChanged {
+        private readonly Version _gameVersion;
+
         private State _state = new State();
         public State State {
             get => _state;
@@ -20,7 +22,7 @@ namespace LiveSplit.VampireSurvivors.UI.Controls {
                 OnPropertyChanged(nameof(RemainingKills));
                 OnPropertyChanged(nameof(RemainingSkeles));
                 OnPropertyChanged(nameof(RemainingHealing));
-                
+
                 UpdateAchievements();
             }
         }
@@ -36,9 +38,11 @@ namespace LiveSplit.VampireSurvivors.UI.Controls {
         public int RemainingKills => _state.RemainingKills;
         public int RemainingSkeles => _state.RemainingSkeles;
         public int RemainingHealing => _state.RemainingHealing;
-        
-        public VampireSurvivorsControl() {
+
+        public VampireSurvivorsControl(Version gameVersion = null) {
             InitializeComponent();
+
+            _gameVersion = gameVersion;
         }
 
         private void VampireSurvivorsControl_Load(object sender, EventArgs e) {
@@ -50,7 +54,8 @@ namespace LiveSplit.VampireSurvivors.UI.Controls {
             lblHealingRem.DataBindings.Add(new Binding("Text", this, nameof(RemainingHealing)));
             grpAchievements.DataBindings.Add(new Binding("Text", this, nameof(AchievementsTitle)));
 
-            List<Achievement> achievements = Enum.GetValues(typeof(Achievement)).Cast<Achievement>().ToList();
+            List<Achievement> achievements =
+                _gameVersion == null ? Achievements.GetAll() : Achievements.ForVersion(_gameVersion);
 
             // update the number of rows to match the number of achievements
             // the `RowCount` property is actually the _maximum_ number of rows, not the real number of rows, so
