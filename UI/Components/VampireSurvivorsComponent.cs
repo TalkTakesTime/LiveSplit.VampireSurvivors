@@ -11,7 +11,7 @@ namespace LiveSplit.UI.Components {
     public class VampireSurvivorsComponent : ControlComponent {
         private VampireSurvivorsControl _control;
         private FileSystemWatcher _saveWatcher;
-        
+
         // This is how we will access all the settings that the user has set.
         public VampireSurvivorsSettings Settings { get; set; }
         // This object contains all of the current information about the splits, the timer, etc.
@@ -82,6 +82,11 @@ namespace LiveSplit.UI.Components {
 
         public override void SetSettings(XmlNode settings) {
             Settings.SetSettings(settings);
+
+            if (GameVersion.TryLoadGameVersion(Settings.VsInstallDir, out GameVersion gv)
+                && gv.TryParseVersion(out Version version)) {
+                _control.GameVersion = version;
+            }
         }
 
         public int GetSettingsHashCode() => Settings.GetSettingsHashCode();

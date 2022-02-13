@@ -43,12 +43,12 @@ namespace LiveSplit.VampireSurvivors.UI.Controls {
 
         private void AchievementControl_Load(object sender, EventArgs e) {
             imgCheckbox.DataBindings.Add("Image", this, nameof(CheckedImage));
-            imgAchievement.Image = _resource.Image;
+            imgAchievement.Image = _resource?.Image;
             Disposed += OnDisposed;
         }
 
         private void OnDisposed(object sender, EventArgs e) {
-            _resource.Dispose();
+            _resource?.Dispose();
         }
 
 

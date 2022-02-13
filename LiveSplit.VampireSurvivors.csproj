@@ -48,6 +48,7 @@
         <Compile Include="Attributes\DescriptionAttribute.cs" />
         <Compile Include="Attributes\FromVersionAttribute.cs" />
         <Compile Include="Images\ImageResource.cs" />
+        <Compile Include="Model\GameVersion.cs" />
         <Compile Include="Model\SaveData\Achievement.cs" />
         <Compile Include="Model\SaveData\SaveData.cs" />
         <Compile Include="Model\State.cs" />
