@@ -9,8 +9,9 @@ This component works by reading the save data of your Vampire Survivors game, al
 
 - Automatically updates based on save data content &mdash; no need to manually mark achievements off
 - Tracks cumulative total kills, skeleton kills, and healing
-- Tracks achievements achieved so far, displaying them in the in-game order using the in-game icons
+- Tracks achievements attained so far, displaying them in the in-game order using the in-game icons
 - Achievement descriptions on icon hover
+- Automatically detects the game version and shows on the achievements attainable in the detected game version
 
 ### Limitations
 
@@ -18,7 +19,9 @@ Achievements and kills/healing are only updated at the end of each run. This is 
 
 ### Supported versions
 
-Only version 0.2.11 is currently supported.
+Vampire Survivors versions 0.2.11 and up are supported.
+
+Older versions will probably still work, but they will display all 43 achievements attainable in 0.2.11 regardless of their existence in the installed version of Vampire Survivors. Any issues encountered when using this component with a version of Vampire Survivors older than 0.2.11 will not be addressed, as the component does not provide support for those versions.
 
 ## Instructions
 
@@ -35,9 +38,9 @@ Only version 0.2.11 is currently supported.
 5. Ensure that the Vampire Survivors installation directory has been filled in the text box. If it is not automatically detected, use the `...` button to manually select it
 6. Accept the layout and return to the main LiveSplit screen
 
-You may need to readjust your LiveSplit window's size to ensure that the achievements tracker is fully visible. It should look like this:
+You may need to readjust your LiveSplit window's size to ensure that the achievements tracker is fully visible. It should look like this (with the exact achievements shown varying depending on your Vampire Survivors version):
 
-![Vampire Survivors Tracker UI in LiveSplit](livesplit-vampiresurvivors_0.2.11.png)
+![Vampire Survivors Tracker UI in LiveSplit (Vampire Survivors v0.2.11)](livesplit-vampiresurvivors_0.2.11.png)
 
 __Note:__ It will start tracking stats when you start a split, and it will stop tracking when you stop a split. When LiveSplit's timer is not running (unless paused), it will display the default all-zero stats.
 
