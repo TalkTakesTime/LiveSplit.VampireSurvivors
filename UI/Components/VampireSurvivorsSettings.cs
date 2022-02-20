@@ -3,6 +3,8 @@ using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
 using System.Xml;
+using LiveSplit.VampireSurvivors.Model.SaveData;
+using Newtonsoft.Json;
 
 // ReSharper disable LocalizableElement
 
@@ -60,7 +62,7 @@ namespace LiveSplit.UI.Components {
         }
 
         private bool TrySetInstallDir() {
-            var cands = new string[] {
+            string[] cands = {
                 Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFilesX86),
                 Environment.GetFolderPath(Environment.SpecialFolder.CommonProgramFiles),
             };
@@ -96,5 +98,27 @@ namespace LiveSplit.UI.Components {
         }
 
         public int GetSettingsHashCode() => CreateSettingsNode(null, null);
+
+        private void btnResetData_Click(object sender, EventArgs e) {
+            var result = MessageBox.Show(
+                "This will PERMANENTLY delete your Vampire Survivors save data. Please back up your data before continuing if you do not want to lose it.\n\nDo you wish to continue?",
+                "Delete Vampire Survivors save data?",
+                MessageBoxButtons.OKCancel,
+                MessageBoxIcon.Warning
+            );
+
+            if (result != DialogResult.OK) {
+                return;
+            }
+
+            try {
+                SaveData.DeleteSaveData(VsInstallDir);
+            } catch (Exception err) {
+                MessageBox.Show(
+                    $"Failed to delete save data: {err.Message}", "Failed to delete save data",
+                    MessageBoxButtons.OK
+                );
+            }
+        }
     }
 }

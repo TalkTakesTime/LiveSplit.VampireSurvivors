@@ -26,9 +26,11 @@ namespace LiveSplit.VampireSurvivors.UI.Controls {
                 _state = value;
                 OnPropertyChanged(nameof(TotalKills));
                 OnPropertyChanged(nameof(TotalSkeles));
+                OnPropertyChanged(nameof(TotalLionHeads));
                 OnPropertyChanged(nameof(TotalHealing));
                 OnPropertyChanged(nameof(RemainingKills));
                 OnPropertyChanged(nameof(RemainingSkeles));
+                OnPropertyChanged(nameof(RemainingLionHeads));
                 OnPropertyChanged(nameof(RemainingHealing));
 
                 UpdateAchievementChecks();
@@ -42,9 +44,11 @@ namespace LiveSplit.VampireSurvivors.UI.Controls {
 
         public int TotalKills => _state.TotalKills;
         public int TotalSkeles => _state.TotalSkeles;
+        public int TotalLionHeads => _state.TotalLionHeads;
         public int TotalHealing => _state.TotalHealing;
         public int RemainingKills => _state.RemainingKills;
         public int RemainingSkeles => _state.RemainingSkeles;
+        public int RemainingLionHeads => _state.RemainingLionHeads;
         public int RemainingHealing => _state.RemainingHealing;
 
         public VampireSurvivorsControl() {
@@ -56,10 +60,12 @@ namespace LiveSplit.VampireSurvivors.UI.Controls {
             lblKillsRem.DataBindings.Add(new Binding("Text", this, nameof(RemainingKills)));
             lblSkelesCumu.DataBindings.Add(new Binding("Text", this, nameof(TotalSkeles)));
             lblSkelesRem.DataBindings.Add(new Binding("Text", this, nameof(RemainingSkeles)));
+            lblBuerCumu.DataBindings.Add(new Binding("Text", this, nameof(TotalLionHeads)));
+            lblBuerRem.DataBindings.Add(new Binding("Text", this, nameof(RemainingLionHeads)));
             lblHealingCumu.DataBindings.Add(new Binding("Text", this, nameof(TotalHealing)));
             lblHealingRem.DataBindings.Add(new Binding("Text", this, nameof(RemainingHealing)));
-            lblAchievements.DataBindings.Add(new Binding("Text", this, nameof(AchievementsTitle)));
 
+            lblAchievements.DataBindings.Add(new Binding("Text", this, nameof(AchievementsTitle)));
             UpdateAchievementsForVersion();
         }
 

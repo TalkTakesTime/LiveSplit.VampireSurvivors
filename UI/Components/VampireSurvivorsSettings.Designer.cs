@@ -2,12 +2,12 @@
 
 namespace LiveSplit.UI.Components {
     partial class VampireSurvivorsSettings {
-        /// <summary> 
+        /// <summary>
         /// Required designer variable.
         /// </summary>
         private IContainer components = null;
 
-        /// <summary> 
+        /// <summary>
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
@@ -32,6 +32,7 @@ namespace LiveSplit.UI.Components {
             this.txtVsDir = new System.Windows.Forms.TextBox();
             this.btnSelectVsDir = new System.Windows.Forms.Button();
             this.fbrowsVsDir = new System.Windows.Forms.FolderBrowserDialog();
+            this.btnResetData = new System.Windows.Forms.Button();
             this.topLevelLayoutPanel.SuspendLayout();
             this.flowPnlVsDir.SuspendLayout();
             this.SuspendLayout();
@@ -48,7 +49,7 @@ namespace LiveSplit.UI.Components {
             this.topLevelLayoutPanel.RowCount = 1;
             this.topLevelLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.topLevelLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.topLevelLayoutPanel.Size = new System.Drawing.Size(255, 100);
+            this.topLevelLayoutPanel.Size = new System.Drawing.Size(350, 68);
             this.topLevelLayoutPanel.TabIndex = 0;
             // 
             // flowPnlVsDir
@@ -60,7 +61,7 @@ namespace LiveSplit.UI.Components {
             this.flowPnlVsDir.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowPnlVsDir.Location = new System.Drawing.Point(3, 3);
             this.flowPnlVsDir.Name = "flowPnlVsDir";
-            this.flowPnlVsDir.Size = new System.Drawing.Size(249, 94);
+            this.flowPnlVsDir.Size = new System.Drawing.Size(344, 62);
             this.flowPnlVsDir.TabIndex = 0;
             // 
             // lblVsDir
@@ -77,7 +78,7 @@ namespace LiveSplit.UI.Components {
             this.txtVsDir.Location = new System.Drawing.Point(3, 16);
             this.txtVsDir.MinimumSize = new System.Drawing.Size(200, 4);
             this.txtVsDir.Name = "txtVsDir";
-            this.txtVsDir.Size = new System.Drawing.Size(200, 20);
+            this.txtVsDir.Size = new System.Drawing.Size(300, 20);
             this.txtVsDir.TabIndex = 1;
             this.txtVsDir.TextChanged += new System.EventHandler(this.txtVsDir_TextChanged);
             // 
@@ -85,7 +86,7 @@ namespace LiveSplit.UI.Components {
             // 
             this.btnSelectVsDir.AutoSize = true;
             this.btnSelectVsDir.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnSelectVsDir.Location = new System.Drawing.Point(206, 13);
+            this.btnSelectVsDir.Location = new System.Drawing.Point(306, 13);
             this.btnSelectVsDir.Margin = new System.Windows.Forms.Padding(0);
             this.btnSelectVsDir.Name = "btnSelectVsDir";
             this.btnSelectVsDir.Size = new System.Drawing.Size(26, 23);
@@ -100,15 +101,27 @@ namespace LiveSplit.UI.Components {
             this.fbrowsVsDir.RootFolder = System.Environment.SpecialFolder.MyComputer;
             this.fbrowsVsDir.ShowNewFolderButton = false;
             // 
+            // btnResetData
+            // 
+            this.btnResetData.AutoSize = true;
+            this.btnResetData.Location = new System.Drawing.Point(0, 74);
+            this.btnResetData.Name = "btnResetData";
+            this.btnResetData.Size = new System.Drawing.Size(95, 23);
+            this.btnResetData.TabIndex = 1;
+            this.btnResetData.Text = "Reset save data";
+            this.btnResetData.UseVisualStyleBackColor = true;
+            this.btnResetData.Click += new System.EventHandler(this.btnResetData_Click);
+            // 
             // VampireSurvivorsSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.Controls.Add(this.btnResetData);
             this.Controls.Add(this.topLevelLayoutPanel);
             this.MinimumSize = new System.Drawing.Size(250, 0);
             this.Name = "VampireSurvivorsSettings";
-            this.Size = new System.Drawing.Size(258, 150);
+            this.Size = new System.Drawing.Size(353, 309);
             this.Load += new System.EventHandler(this.VampireSurvivorsSettings_Load);
             this.topLevelLayoutPanel.ResumeLayout(false);
             this.topLevelLayoutPanel.PerformLayout();
@@ -117,6 +130,8 @@ namespace LiveSplit.UI.Components {
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Button btnResetData;
 
         private System.Windows.Forms.Button btnSelectVsDir;
 
