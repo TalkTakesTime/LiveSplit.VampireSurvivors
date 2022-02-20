@@ -33,6 +33,10 @@ namespace LiveSplit.VampireSurvivors.Model.SaveData {
         [FromVersion("0.2.12")]
         ReachLV100WithMortaccio,
 
+        [Description("Reach Level 100 with Yatta Cavallo.")]
+        [FromVersion("0.2.13")]
+        ReachLV100WithCavallo,
+
         [Description("Survive 1 minute with any character.")]
         Survive1Minute,
 
@@ -50,6 +54,14 @@ namespace LiveSplit.VampireSurvivors.Model.SaveData {
 
         [Description("Survive 20 minutes with Krochi.")]
         Survive20MinutesWithCross,
+
+        [Description("Survive 20 minutes with at least +10% Curse.")]
+        [FromVersion("0.2.13")]
+        Survive20MinutesWithCurse,
+
+        [Description("Survive 30 minutes with Lama.")]
+        [FromVersion("0.2.13")]
+        Survive30MinutesWithAxe,
 
         [Description("Survive 30 minutes in Green Acres.")]
         [FromVersion("0.2.12")]
@@ -109,8 +121,12 @@ namespace LiveSplit.VampireSurvivors.Model.SaveData {
         [Description("Find a Stone Mask.")]
         FindAStoneMask,
 
-        [Description("Defeat a total of 3000 skeletons.")]
+        [Description("Defeat a total of 3000 Skeletons.")]
         Defeat3000Skeletons,
+
+        [Description("Defeat a total of 3000 Lion Heads.")]
+        [FromVersion("0.2.13")]
+        Defeat3000Buers,
 
         [Description("Defeat a total of 5000 enemies.")]
         Defeat5000Enemies,

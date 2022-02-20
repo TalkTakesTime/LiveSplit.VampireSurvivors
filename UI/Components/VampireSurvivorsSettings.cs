@@ -9,11 +9,11 @@ using System.Xml;
 namespace LiveSplit.UI.Components {
     public partial class VampireSurvivorsSettings : UserControl {
         private const string InstallDirSetting = "VsInstallDir";
-        
+
         private const string VampireSurvivorsBinary = "VampireSurvivors.exe";
         private static bool ContainsBinary(string dir) =>
             dir != null && File.Exists(Path.Combine(dir, VampireSurvivorsBinary));
-        
+
         public string VsInstallDir { get; set; }
 
         public VampireSurvivorsSettings() {
@@ -39,9 +39,9 @@ namespace LiveSplit.UI.Components {
             if (res != DialogResult.OK) {
                 return;
             }
-            
+
             string vsDir = fbrowsVsDir.SelectedPath;
-                
+
             // test if we're in a valid install dir
             if (!ContainsBinary(vsDir)) {
                 MessageBox.Show(

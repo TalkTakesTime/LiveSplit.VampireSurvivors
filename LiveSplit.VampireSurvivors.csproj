@@ -147,6 +147,10 @@
       <EmbeddedResource Include="Images\EvolveLightning.png" />
       <EmbeddedResource Include="Images\ReachLV100WithMortaccio.png" />
       <EmbeddedResource Include="Images\Survive30MinutesInGreenAcres.png" />
+      <EmbeddedResource Include="Images\ReachLV100WithCavallo.png" />
+      <EmbeddedResource Include="Images\Defeat3000Buers.png" />
+      <EmbeddedResource Include="Images\Survive20MinutesWithCurse.png" />
+      <EmbeddedResource Include="Images\Survive30MinutesWithAxe.png" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
