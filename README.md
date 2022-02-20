@@ -44,6 +44,11 @@ You may need to readjust your LiveSplit window's size to ensure that the achieve
 
 __Note:__ It will start tracking stats when you start a split, and it will stop tracking when you stop a split. When LiveSplit's timer is not running (unless paused), it will display the default all-zero stats.
 
+### Upgrading
+
+- Follow steps 2 and 3 of the Installation instructions, copying the new `dll`s over the old ones.
+- Ensure that the Vampire Survivors installation directory is correct, as in step 5 of the Usage instructions.
+
 ### Building
 1. Clone the [LiveSplit repository](https://github.com/LiveSplit/LiveSplit)
 2. Set up a working build environment for LiveSplit according to their instructions and ensure that you can build it
