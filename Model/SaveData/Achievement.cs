@@ -29,6 +29,10 @@ namespace LiveSplit.VampireSurvivors.Model.SaveData {
         [Description("Reach Level 20 in Mad Forest.")]
         ReachLV20InMadForest,
 
+        [Description("Reach Level 40 in Inlaid Library.")]
+        [FromVersion("0.3.0")]
+        ReachLV40InLibrary,
+
         [Description("Reach Level 100 with Mortaccio.")]
         [FromVersion("0.2.12")]
         ReachLV100WithMortaccio,
@@ -48,6 +52,10 @@ namespace LiveSplit.VampireSurvivors.Model.SaveData {
 
         [Description("Survive 10 minutes with any character.")]
         Survive10Minutes,
+
+        [Description("Survive 15 minutes with Poppea.")]
+        [FromVersion("0.3.0")]
+        Survive15MinutesWithSong,
 
         [Description("Survive 20 minutes with any character.")]
         Survive20Minutes,
@@ -121,6 +129,14 @@ namespace LiveSplit.VampireSurvivors.Model.SaveData {
         [Description("Find a Stone Mask.")]
         FindAStoneMask,
 
+        [Description("Find the Milky Way Map.")]
+        [FromVersion("0.3.0")]
+        FindMilkyWayMap,
+
+        [Description("Find and open the coffin in the Dairy Plant.")]
+        [FromVersion("0.3.0")]
+        FindCoffinStage3,
+
         [Description("Defeat a total of 3000 Skeletons.")]
         Defeat3000Skeletons,
 
@@ -139,6 +155,10 @@ namespace LiveSplit.VampireSurvivors.Model.SaveData {
 
         [Description("Defeat the Nesuferit in the Inlaid Library.")]
         DefeatBossLibrary,
+
+        [Description("Defeat the Sword Guardian in the Dairy Plant.")]
+        [FromVersion("0.3.0")]
+        DefeatBossPlant,
 
         [Description("Unlock Hyper mode for 2 stages.")]
         Unlock2Hypers,
@@ -173,6 +193,10 @@ namespace LiveSplit.VampireSurvivors.Model.SaveData {
 
         [Description("Evolve the Garlic.")]
         EvolveGarlic,
+
+        [Description("Evolve the Song Of Mana.")]
+        [FromVersion("0.3.0")]
+        EvolveSongOfMana,
 
         [Description("Unite Ebony Wings and Peachone.")]
         UniteBirds,
